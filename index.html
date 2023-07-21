@@ -57,6 +57,11 @@
             console.error( error );
         });
 
+        // lights
+        const directionalLight = new THREE.DirectionalLight(0xff0000, 10); // Color: white, Intensity: 1
+        directionalLight.position.set(1, 2, 3); // Set the light's position
+        scene.add(directionalLight);
+
         //Scene
         scene.background = new THREE.Color(255, 255, 255)
         camera.position.set( 1, 1, 3 );
