@@ -1,4 +1,3 @@
-# CODE2270-2022
-BIM Visualisation Interface
+# CODE2132-2023
 
-<b>This is an example page for BIM integration on web pages.</b>
+GH to ThreeJS working files
