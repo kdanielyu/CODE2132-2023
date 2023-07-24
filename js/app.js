@@ -43,7 +43,7 @@ function init() {
 
   loader.load(
   	// resource URL
-  	"./assets/house.json",
+  	"./assets/example_scene.json",
 
   	// onLoad callback
   	function ( obj ) {
