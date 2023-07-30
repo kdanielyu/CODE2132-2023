@@ -26,7 +26,7 @@ function init() {
 
   // create camera (default field of view is 60)
   camera = new THREE.PerspectiveCamera( 60, container.clientWidth / container.clientHeight, 0.1, 10000 );
-  camera.position.set( 40, 50, 100 ); // starting position of the camera
+  camera.position.set( 60, 90, 120 ); // starting position of the camera
 
   // camera controls to allow for orbiting
   controls = new THREE.OrbitControls( camera, renderer.domElement );
@@ -43,7 +43,7 @@ function init() {
 
   loader.load(
   	// resource URL
-  	"./assets/example_scene.json",
+  	"./assets/para-urban-model.json",
 
   	// onLoad callback
   	function ( obj ) {

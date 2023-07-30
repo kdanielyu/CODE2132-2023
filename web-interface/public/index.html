@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Urban Designer</title>
+  <style>
+    /* for full screen canvas, use these styles */
+    html, body {
+      margin: 0;
+      height: 100%;
+      width: 100%;
+    }
+    /* style the three.js container however your want */
+    #container {
+      position: relative;
+      height: 50%;
+      width: 100%;
+    }
+    /* removes outline when clicking on three.js canvas */
+    canvas:focus {
+      outline: none;
+    }
+    /* the style of the progress text */
+    #progress {
+      position: absolute;
+      top: 0;
+      margin: 6px;
+      color: grey;
+      font-family: 'Courier New', Courier, monospace;
+      z-index: 2000;
+    }
+  </style>
+</head>
+<body>
+<h1>Urban Designer</h1>
+<p>
+  <label for="enableAnalysis">Enable Analysis:</label>
+  <input type="checkbox" id="enableAnalysis">
+</p>
+<p>Population Number: <span id="PopulationValue">0</span></p>
+<input type="range" min="1000" max="10000" value="0" step="1" id="populationSlider">
+<p>Seed Number: <span id="SeedValue">0</span></p>
+<input type="range" min="0" max="100" value="0" step="1" id="seedSlider">
+<br><br>
+<button id="updateButton">Update Values</button>
+<br><br>
+<script src="app.js"></script>
+<!-- this is the container where the three.js scene will go -->
+<div id="container">
+  <button id="refreshButton" onclick="refreshScene()">Refresh Scene</button><br><br>
+</div>
+<!-- these are the required scripts for the three.js scene -->
+<script src="../js/three.min.js"></script>
+<script src="../js/OrbitControls.js"></script>
+<script src="../js/RectAreaLightUniformsLib.js"></script>
+
+<!-- this is your app's js file -->
+<script src="../js/app.js"></script>
+</body>
+</html>
